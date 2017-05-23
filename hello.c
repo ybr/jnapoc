@@ -26,18 +26,6 @@ typedef struct {
   T_RESULT_DETAILS details;
 } TResult;
 
-void hello() {
-  printf("Hello world from Yo!\n");
-}
-
-double hello1(char* str, int times) {
-  int i;
-  for(i = 0; i < times; i++) {
-    printf("%d %s\r\n", i, str);
-  }
-  return 0.123;
-}
-
 void printAddress(TAddress* address) {
   printf("Address:\n\r");
   printf("\t%s\n\r", address->line1);
@@ -48,7 +36,8 @@ void printAddress(TAddress* address) {
   printf("\t%s\n\r", address->country);
 }
 
-TResult* printUser(TUser* user, int user_size, double zeros[], int zero_size) {
+TResult* printUser(TUser* user, double zeros[], int zero_size) {
+  printf("FROM C\n\r");
   int i;
 
   for(i = 0; i < zero_size; i++) {

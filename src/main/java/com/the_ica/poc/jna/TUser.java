@@ -5,8 +5,6 @@ import com.sun.jna.*;
 import java.util.*;
 
 public class TUser extends Structure {
-  public static class ByReference extends TUser implements Structure.ByReference {}
-
   public String name;
   public int age;
   public TAddress address;

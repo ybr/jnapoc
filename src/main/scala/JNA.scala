@@ -7,7 +7,7 @@ object JNA {
     val lib = Native.loadLibrary("/home/ybr/gitlab/jna/libhello.so", classOf[CLib]).asInstanceOf[CLib]
 
     val user = new TUser(
-      "yohann",
+      "ybr",
       36,
       new TAddress(
         "4 rue Camille Claudel",
@@ -18,7 +18,5 @@ object JNA {
     ))
 
     println(lib.printUser(user, Array(0.123, 0.124), 2))
-    println("Name after = " + user.name)
-    println("Age after = " + user.age)
   }
 }
